@@ -1,0 +1,11 @@
+.nav-logo {
+  height: 120px;
+  width: 120px;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-logo {
+    height: 60px;
+    width: 60px;
+  }
+}

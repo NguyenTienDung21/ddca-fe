@@ -1,0 +1,54 @@
+// // Connect to socket and handle updates
+// const socket = io("http://localhost:8084");
+// setSocket(socket);
+
+// // Add a listener for the "stockUpdate" event
+// socket.on("stockUpdate", (updatedStock) => {
+//   console.log("Updated stock:", updatedStock);
+
+//   setCsvData((prevData) => {
+//     return prevData.map((row) => {
+//       const updatedRow = updatedStock.find(
+//         (updatedItem: { ItemID: string }) =>
+//           updatedItem.ItemID === row.ItemID
+//       );
+
+//       if (updatedRow) {
+//         // Update the 'Qty_Scanned' value in the row
+//         return { ...row, Qty_Scanned: updatedRow.Qty_Scanned };
+//       }
+
+//       return row;
+//     });
+//   });
+// });
+
+// // Clean up the socket connection when the component unmounts
+// return () => {
+//   socket.disconnect();
+// };
+
+//! Kiet's code
+
+// <button
+// className="col-6 bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-2 rounded m-2"
+// onClick={handleSubmitChange}
+// >
+// Submit
+// </button>
+
+// const handleSubmitChange = () => {
+//     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+//     for (let i = 0; i < checkboxes.length; i++) {
+//       const checkbox = checkboxes[i] as HTMLInputElement;
+//       checkbox.addEventListener("click", () => {
+//         console.log(checkbox)
+//         if (checkbox.checked = true ) {
+//           checkbox.disabled = true;
+//         }
+//         else{
+//           checkbox.disabled=false;
+//         }
+//       });
+//     }
+//   };

@@ -1,0 +1,143 @@
+:root {
+  --padding: 25px;
+  --secondary: #6ec7df;
+  --inputHeight: 48px;
+}
+
+.login_container {
+  height: fit-content;
+  max-height: 90%;
+  width: 400px;
+  display: flex;
+  gap: var(--padding);
+  flex-direction: column;
+  padding-top: var(--padding);
+  padding-bottom: calc(2 * var(--padding));
+  justify-content: center;
+  box-shadow: 0px 0px 30px rgba(156, 213, 255, 0.5);
+  /* background-color: red; */
+  min-height: 450px;
+}
+
+.img {
+  align-self: center;
+}
+
+.login_button {
+  background: var(--secondary);
+  border-radius: 10px;
+  border: solid black;
+  padding: 12px;
+  color: #fdfdfd;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 100%;
+  height: var(--inputHeight);
+  border-color: transparent;
+  outline: none;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.login_button:hover {
+  filter: brightness(95%);
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding);
+}
+
+.input {
+  padding: 16px 20px;
+  height: var(--inputHeight);
+  width: 100%;
+  background: #fdfdfd;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 10px;
+  transition: 0.15s;
+  outline-color: #fdfdfd;
+}
+
+.input:focus {
+  outline-color: var(--secondary);
+}
+
+@media only screen and (max-width: 500px) {
+  .login_container {
+    padding-top: 0;
+    padding-bottom: 20px;
+    width: fit-content;
+    max-height: 500px;
+    min-height: 350px;
+    gap: calc(var(--padding) / 2);
+    align-items: center;
+  }
+  .login_form {
+    max-width: 500px;
+    min-width: 250px;
+    gap: calc(var(--padding) * 0.7);
+  }
+  .img {
+    width: 80px;
+    height: 80px;
+  }
+  .role {
+    font-size: 12px;
+    padding: 2px 0px;
+  }
+  .login_button {
+    height: calc(var(--inputHeight) * 0.7);
+    padding: 0px;
+    font-size: 10px;
+    border-radius: 5px;
+  }
+  .input {
+    padding: 8px 10px;
+    height: calc(var(--inputHeight) * 0.7);
+    font-size: 10px;
+    border-radius: 5px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .login_container {
+    max-height: 300px;
+    min-height: 300px;
+    padding-top: 0;
+    padding-bottom: 10px;
+    padding: 0 30px;
+    width: 100%;
+    gap: calc(var(--padding) / 2);
+  }
+  .login_form {
+    gap: calc(var(--padding) / 2);
+    min-width: 200px;
+  }
+  .role {
+    font-size: 12px;
+    padding: 2px 0px;
+  }
+  .radio-m {
+    margin: 2px;
+  }
+  .img {
+    width: 80px;
+    height: 80px;
+  }
+  .login_button {
+    height: calc(var(--inputHeight) / 2);
+    padding: 0px;
+    font-size: 8px;
+    border-radius: 5px;
+  }
+  .input {
+    padding: 8px 10px;
+    height: calc(var(--inputHeight) / 2);
+    font-size: 10px;
+    border-radius: 5px;
+  }
+}

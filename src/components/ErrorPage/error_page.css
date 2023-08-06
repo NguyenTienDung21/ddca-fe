@@ -1,0 +1,27 @@
+:root {
+    --errorColor: red;
+    --errorPadding: 80px;
+}
+
+.error_num {
+    color: var(--primary);
+    font-size: 160px;
+    line-height: 90%;
+}
+
+.subtext {
+    font-size: 32px;
+}
+
+.error_container {
+    background-color: white;
+    border-radius: calc(2*var(--borderRadius));
+    border: var(--greyBorder) solid;
+    /* box-shadow: var(--boxShadow); */
+    width: 60%;
+    box-sizing: border-box;
+    position: relative;
+    padding: var(--errorPadding);
+    align-items: center;
+    gap: 24px;
+}

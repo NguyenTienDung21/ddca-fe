@@ -1,0 +1,13 @@
+.logout_button {
+  padding: 6px 32px;
+  color: white;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+  .logout_button {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 24px
+  }
+}

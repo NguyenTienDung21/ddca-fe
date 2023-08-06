@@ -1,0 +1,22 @@
+:root {
+    --lightBlue: #e9f2fa;
+    --padding: 25px;
+    --greyBorder: #F7F7F7;
+    --grey: #7B7C80;
+    --white: #ffff;
+    --fontSize: 12px;
+    --borderRadius: 0.5em;
+    --boxShadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    --containerPadding: 16px 80px 56px 80px
+}
+/* 
+.container_admin_features{
+    background-color: var(--white);
+    border-radius: calc(var(--borderRadius)*2);
+    padding: var(--containerPadding);
+    height: 70%;
+    width:60%;
+    align-items: center;
+
+    display: flex;
+} */
