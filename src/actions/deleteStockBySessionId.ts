@@ -1,6 +1,6 @@
 import axios from "axios";
 import { API_STOCK } from "../utils";
-
+import instance from "./instance";
 //Delete Stock by Session ID
 export const deleteStockBySessionId = async (name: string) => {
 
@@ -13,7 +13,7 @@ export const deleteStockBySessionId = async (name: string) => {
   const existedLocalStorageJWT = localStorage.getItem(date);
 
 
-  const response = await axios.delete(
+  const response = await instance.delete(
     //http://localhost:8081/stocks/delete-stocks-session
     API_STOCK.deleteStockSession,
     {

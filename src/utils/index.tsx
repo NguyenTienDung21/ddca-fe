@@ -5,7 +5,7 @@ export const queryClient = new QueryClient();
 
 //If the EC2 instance on AWS is stopped and run again, it will generate the Public IPv4 DNS, then
 //we have to go into AWS console EC2 instance and copy that Public IPv4 DNS and paste here on React
-const BASE_URL = "http://ec2-18-141-211-210.ap-southeast-1.compute.amazonaws.com";
+const BASE_URL = "https://ec2-52-76-37-7.ap-southeast-1.compute.amazonaws.com";
 //const BASE_URL = "http://localhost:8081"; //this is for local dev only
 
 export const API_USER = {
