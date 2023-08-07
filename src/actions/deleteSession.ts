@@ -1,6 +1,6 @@
 import axios from "axios";
 import { API_SESSION } from "../utils";
-import https from "https";
+// import https from "https";
 import instance from "./instance";
 
 //Delete Session
@@ -14,7 +14,7 @@ export const deleteSession = async (name: string) => {
   const existedLocalStorageJWT = localStorage.getItem(date);
   
   //http://localhost:8081/sessions/delete
-  const response = await instnace.delete(API_SESSION.deleteSession, {
+  const response = await axios.delete(API_SESSION.deleteSession, {
     data: {
       name: name,
     },
@@ -22,7 +22,8 @@ export const deleteSession = async (name: string) => {
       Authorization: `Bearer ${existedLocalStorageJWT}`,
       Accept: "application/json",
       "Content-Type": "application/json",
-    }
+    },
+    ...instance
   });
   return response.data;
 };

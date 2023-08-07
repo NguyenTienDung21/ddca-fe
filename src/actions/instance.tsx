@@ -1,9 +1,9 @@
-import axios from 'axios';
+import * as https from "https";
 
-const instance = axios.create({
+const instance = {
     httpsAgent: new https.Agent({
       rejectUnauthorized: false,
     })
-  })
+  }
 
 export default instance;

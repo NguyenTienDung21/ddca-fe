@@ -13,7 +13,7 @@ export const deleteStockBySessionId = async (name: string) => {
   const existedLocalStorageJWT = localStorage.getItem(date);
 
 
-  const response = await instance.delete(
+  const response = await axios.delete(
     //http://localhost:8081/stocks/delete-stocks-session
     API_STOCK.deleteStockSession,
     {
@@ -24,8 +24,9 @@ export const deleteStockBySessionId = async (name: string) => {
         Authorization: `Bearer ${existedLocalStorageJWT}`,
         Accept: "application/json",
         "Content-Type": "application/json",
-      }
-    }
+      },
+      ...instance
+    },
   );
   return response.data;
 };
